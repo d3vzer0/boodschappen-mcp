@@ -2,8 +2,8 @@ from pydantic import BaseModel, Field
 
 
 class PricePerUnit(BaseModel):
-    price: int = Field(ge=0, description="Prijs per eenheid in cent")
-    unit: str
+    price: int | None = Field(ge=0, description="Prijs per eenheid in cent", default=None)
+    unit: str | None = None
 
 
 class Price(BaseModel):
