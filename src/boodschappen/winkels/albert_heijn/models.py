@@ -1,4 +1,4 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 
 class AccessToken(BaseModel):
@@ -40,3 +40,8 @@ class Product(BaseModel):
 class SearchProducts(BaseModel):
     products: list[Product]
     page: Page
+
+
+class ShoppingListItems(BaseModel):
+    prod_id: int = Field(gt=0, description="Albert Heijn product ID")
+    count: int = Field(gt=0, description="Aantal producten")
