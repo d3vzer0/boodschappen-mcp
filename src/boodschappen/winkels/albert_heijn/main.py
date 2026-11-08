@@ -1,12 +1,10 @@
-import asyncio
+from typing import Annotated
 
 import httpx2
 from fastmcp import FastMCP
 from fastmcp.dependencies import Depends
-from fastmcp.server.server import StateValue
 from fastmcp.server.sessions import UserSession
-from key_value.aio.adapters.pydantic import PydanticAdapter
-from key_value.aio.stores.memory import MemoryStore
+from pydantic import Field
 
 from .models import AccessToken, SearchProducts
 
@@ -38,27 +36,13 @@ async def get_token(session: UserSession) -> AccessToken:
     return token
 
 
-@mcp.tool
-async def search_product(search: str, user_token=Depends(get_token)) -> SearchProducts:
+@mcp.tool(description="Zoek producten bij de Albert Heijn")
+async def search_product(
+        search: Annotated[str, Field(description="Zoekterm voor het product, zoals 'Melk'", min_length=1)],
+        user_token=Depends(get_token)) -> SearchProducts:
     params = {'query': search, 'page': 0, 'size': 30, 'sortOn': 'RELEVANCE'}
     headers = {**DEFAULT_HEADERS, 'Authorization': f'Bearer {user_token.access_token}'}
     get_response = httpx2.get('https://api.ah.nl/mobile-services/product/search/v2',
                               params=params, headers=headers)
     get_response.raise_for_status()
     return SearchProducts(**get_response.json())
-
-
-async def main():
-    store = PydanticAdapter(
-        key_value=MemoryStore(),
-        pydantic_model=StateValue,
-    )
-    session = UserSession(store=store, principal='local-test-user', session_id='local-test-session')
-
-    token = await get_token(session)
-    zoek_product = await search_product(search='melk', user_token=token)
-    print(zoek_product)
-
-
-if __name__ == '__main__':
-    asyncio.run(main())
