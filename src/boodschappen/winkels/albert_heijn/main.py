@@ -1,13 +1,13 @@
 import asyncio
 
 import httpx2
+from fastmcp import FastMCP
 from fastmcp.dependencies import Depends
 from fastmcp.server.server import StateValue
 from fastmcp.server.sessions import UserSession
 from key_value.aio.adapters.pydantic import PydanticAdapter
 from key_value.aio.stores.memory import MemoryStore
 
-from boodschappen.main import mcp
 from .models import AccessToken, SearchProducts
 
 DEFAULT_CLIENT_ID = 'appie'
@@ -18,6 +18,8 @@ DEFAULT_HEADERS = {
     'Accept': 'application/json',
     'Content-Type': 'application/json',
 }
+
+mcp = FastMCP("Albert Heijn")
 
 
 async def get_token(session: UserSession) -> AccessToken:
@@ -36,7 +38,7 @@ async def get_token(session: UserSession) -> AccessToken:
     return token
 
 
-@mcp.tool()
+@mcp.tool
 async def search_product(search: str, user_token=Depends(get_token)) -> SearchProducts:
     params = {'query': search, 'page': 0, 'size': 30, 'sortOn': 'RELEVANCE'}
     headers = {**DEFAULT_HEADERS, 'Authorization': f'Bearer {user_token.access_token}'}
