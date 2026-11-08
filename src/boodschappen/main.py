@@ -5,12 +5,14 @@ from starlette.requests import Request
 from starlette.responses import JSONResponse
 
 from boodschappen.settings import Settings
-from winkels.albert_heijn import main as albert_heijn
+from boodschappen.winkels.albert_heijn import main as albert_heijn
+from boodschappen.winkels.jumbo import main as jumbo
 
 settings = Settings()
 
 mcp = FastMCP("MCP server voor het zoeken naar boodschappen")
 mcp.mount(albert_heijn.mcp, namespace="ah")
+mcp.mount(jumbo.mcp, namespace="jumbo")
 
 
 @mcp.custom_route("/health", methods=["GET"], include_in_schema=False)
