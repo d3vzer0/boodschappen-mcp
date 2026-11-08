@@ -1,0 +1,90 @@
+{
+  "page": {
+    "size": 1,
+    "totalElements": 1,
+    "totalPages": 1,
+    "number": 0
+  },
+  "products": [
+    {
+      "webshopId": 441199,
+      "hqId": 76369,
+      "title": "Campina Halfvolle melk voordeelverpakking",
+      "salesUnitSize": "1,5 l",
+      "unitPriceDescription": "prijs per liter \u20ac1.26",
+      "images": [
+        {
+          "width": 800,
+          "height": 800,
+          "url": "https://static.ah.nl/dam/product/AHI_5f425a714e2d4c645247536f716169534c6e6e644b77?revLabel=1&rendition=800x800_WEBP&fileType=binary"
+        },
+        {
+          "width": 400,
+          "height": 400,
+          "url": "https://static.ah.nl/dam/product/AHI_5f425a714e2d4c645247536f716169534c6e6e644b77?revLabel=1&rendition=400x400_WEBP&fileType=binary"
+        },
+        {
+          "width": 200,
+          "height": 200,
+          "url": "https://static.ah.nl/dam/product/AHI_5f425a714e2d4c645247536f716169534c6e6e644b77?revLabel=1&rendition=200x200_WEBP&fileType=binary"
+        },
+        {
+          "width": 48,
+          "height": 48,
+          "url": "https://static.ah.nl/dam/product/AHI_5f425a714e2d4c645247536f716169534c6e6e644b77?revLabel=1&rendition=48x48_GIF&fileType=binary"
+        },
+        {
+          "width": 80,
+          "height": 80,
+          "url": "https://static.ah.nl/dam/product/AHI_5f425a714e2d4c645247536f716169534c6e6e644b77?revLabel=1&rendition=80x80_JPG&fileType=binary"
+        }
+      ],
+      "bonusStartDate": null,
+      "bonusEndDate": null,
+      "discountType": null,
+      "segmentType": null,
+      "promotionType": null,
+      "bonusMechanism": null,
+      "currentPrice": null,
+      "priceBeforeBonus": 1.89,
+      "orderAvailabilityStatus": "IN_ASSORTMENT",
+      "orderAvailabilityDescription": null,
+      "mainCategory": "Zuivel, eieren",
+      "subCategory": "Halfvolle melk",
+      "brand": "Campina",
+      "shopType": "AH",
+      "bonusPeriodDescription": null,
+      "availableOnline": true,
+      "isPreviouslyBought": false,
+      "descriptionHighlights": "<p>Een glas verse melk is lekker en gezond. Het bevat voedingsstoffen die je dagelijks nodig hebt zoals calcium en proteine...</p><p><ul><li>Vers, lekker en gezond</li><li>Van nature rijk aan calcium, proteine, vitamine B2 en B12</li><li>Gemaakt van Nederlandse weidemelk</li></ul></p>",
+      "propertyIcons": [],
+      "stickers": null,
+      "nutriscore": "B",
+      "nix18": false,
+      "isStapelBonus": false,
+      "extraDescriptions": [],
+      "bonusSegmentId": null,
+      "bonusSegmentDescription": null,
+      "isBonus": false,
+      "hasListPrice": null,
+      "descriptionFull": "",
+      "isOrderable": true,
+      "isInfiniteBonus": false,
+      "isSample": false,
+      "isBonusPrice": null,
+      "isSponsored": true,
+      "auctionId": "f7f865d6-dc32-4305-bae5-cf02f741ee29",
+      "isVirtualBundle": false,
+      "virtualBundleItems": null,
+      "productCount": null,
+      "multipleItemPromotion": null,
+      "labelType": null,
+      "discountLabels": [],
+      "isFavorite": null,
+      "externalWebshopUrl": null,
+      "minBestBeforeDays": 7,
+      "medicalDeviceTypeCode": null,
+      "medicineTypeCode": null
+    }
+  ]
+}
