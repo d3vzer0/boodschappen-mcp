@@ -32,3 +32,8 @@ class SearchProducts(BaseModel):
     products: list[Product]
     start: int = Field(ge=0)
     count: int = Field(ge=0, description="Totaal aantal zoekresultaten")
+
+
+class ShoppingListItem(BaseModel):
+    sku: str = Field(min_length=1, description="Jumbo product ID")
+    quantity: int = Field(gt=0, description="Aantal producten")
