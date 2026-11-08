@@ -1,0 +1,64 @@
+{
+  "data": {
+    "searchProducts": {
+      "start": 0,
+      "count": 348,
+      "pageHeader": {"headerText": "Melk", "count": 348},
+      "products": [
+        {
+          "id": "293407STK",
+          "sku": "293407STK",
+          "brand": "Campina",
+          "category": "Zuivel, boter en eieren",
+          "subtitle": "1 liter",
+          "title": "Campina Langlekker Halfvolle Melk 1 L",
+          "image": "https://www.jumbo.com/dam-images/fit-in/360x360/Products/06122025_1764991185232_1764991189711_293407_STK_08712800147008_H1N1.png",
+          "link": "/producten/campina-langlekker-halfvolle-melk-1-l-293407STK",
+          "price": {
+            "price": 179,
+            "promoPrice": null,
+            "pricePerUnit": {"price": 179, "unit": "l", "__typename": "PricePerUnit"},
+            "__typename": "Price"
+          },
+          "availability": {"availability": "AVAILABLE", "isAvailable": true, "label": null},
+          "__typename": "Product"
+        },
+        {
+          "id": "771364CAN",
+          "sku": "771364CAN",
+          "brand": "Jumbo",
+          "category": "Zuivel, boter en eieren",
+          "subtitle": "2 L",
+          "title": "Jumbo Halfvolle Melk 2 L",
+          "image": "https://www.jumbo.com/dam-images/fit-in/360x360/Products/04062026_1780558413640_1780558416607_8717228611803_1.png",
+          "link": "/producten/jumbo-halfvolle-melk-2-l-771364CAN",
+          "price": {
+            "price": 199,
+            "promoPrice": null,
+            "pricePerUnit": {"price": 100, "unit": "l"}
+          },
+          "availability": {"availability": "AVAILABLE", "isAvailable": true},
+          "__typename": "Product"
+        },
+        {
+          "id": "74004DSL",
+          "sku": "74004DSL",
+          "brand": "Campina",
+          "category": "Zuivel, boter en eieren",
+          "subtitle": "4 x 2.4 liter",
+          "title": "Campina Halfvolle Melk Voordeelpack 4 x 2.4 L",
+          "image": "https://www.jumbo.com/dam-images/fit-in/360x360/Products/09082023_1691584705169_1691584718949_8712800537243_1.png",
+          "link": "/producten/campina-halfvolle-melk-voordeelpack-4-x-24-l-74004DSL",
+          "price": {
+            "price": 1075,
+            "promoPrice": 967,
+            "pricePerUnit": {"price": 101, "unit": "l"}
+          },
+          "availability": {"availability": "AVAILABLE", "isAvailable": true},
+          "__typename": "Product"
+        }
+      ],
+      "__typename": "ProductSearchResult"
+    }
+  }
+}
