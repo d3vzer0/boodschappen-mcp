@@ -14,10 +14,17 @@ class Page(BaseModel):
     number: int
 
 
+class Image(BaseModel):
+    width: int
+    height: int
+    url: str
+
+
 class Product(BaseModel):
     webshopId: int
     hqId: int
     title: str
+    images: list[Image]
     salesUnitSize: str
     unitPriceDescription: str | None = None
     mainCategory: str

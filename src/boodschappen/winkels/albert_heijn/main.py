@@ -3,7 +3,7 @@ from typing import Annotated
 import httpx2
 from fastmcp import FastMCP
 from fastmcp.dependencies import Depends
-from fastmcp.server.sessions import UserSession
+from fastmcp.server.sessions import CurrentSession, UserSession
 from pydantic import Field
 
 from .models import AccessToken, SearchProducts
@@ -20,7 +20,7 @@ DEFAULT_HEADERS = {
 mcp = FastMCP("Albert Heijn")
 
 
-async def get_token(session: UserSession) -> AccessToken:
+async def get_token(session: UserSession = CurrentSession()) -> AccessToken:
     facts = await session.get("ah_session", default=None)
     if facts is not None:
         return AccessToken.model_validate(facts)
